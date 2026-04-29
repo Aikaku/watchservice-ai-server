@@ -1,0 +1,18 @@
+# AI 서버 설정 파일
+# OUTPUT_DIR 환경변수가 없으면 ./artifacts 를 기본으로 사용
+
+model:
+  # 아티팩트 폴더 경로 (환경변수 OUTPUT_DIR로 덮어씀)
+  artifacts_dir: "./artifacts"
+
+  # 지원 모델 파일명 (artifacts_dir 하위에 위치해야 함)
+  xgb_model:    "model_xgb.json"   # XGBoost JSON 모델
+  lgb_model:    "model_lgb.txt"    # LightGBM 텍스트 모델 (없으면 건너뜀)
+  sklearn_model: "model.pkl"        # Sklearn pkl 모델 (없으면 건너뜀)
+  label_encoder: "label_encoder.pkl"
+  features:     "features.json"
+  classes:      "classes.json"
+
+server:
+  host: "0.0.0.0"
+  # port는 Railway가 $PORT 환경변수로 주입 → Procfile에서 처리

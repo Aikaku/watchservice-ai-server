@@ -1,0 +1,11 @@
+[
+  "file_read_count",
+  "file_write_count",
+  "file_delete_count",
+  "file_rename_count",
+  "file_encrypt_like_count",
+  "changed_files_count",
+  "random_extension_flag",
+  "entropy_diff_mean",
+  "file_size_diff_mean"
+]
